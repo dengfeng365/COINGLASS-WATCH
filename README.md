@@ -36,6 +36,12 @@
 node verify-extension-codec.js
 ```
 
+![alt text](image-1.png)
+
+![alt text](image.png)
+
 ## 许可证
 
 本项目采用 [MIT License](LICENSE)。
+
+
