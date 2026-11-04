@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "CoinGlass 行情观察",
+  "version": "1.5.0",
+  "description": "查看加密货币价格与 Binance BTC/USDT 清算地图。",
+  "icons": { "128": "icon.png" },
+  "permissions": ["alarms", "storage", "scripting", "tabs", "webRequest"],
+  "host_permissions": [
+    "https://capi.coinglass.com/*",
+    "https://www.coinglass.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "CoinGlass 行情观察",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "minimum_chrome_version": "120"
+}

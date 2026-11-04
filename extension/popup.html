@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoinGlass 行情观察</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">COINGLASS WATCH</div>
+        <h1>行情观察</h1>
+      </div>
+      <button id="refresh" class="refresh" type="button" title="立即刷新" aria-label="立即刷新">↻</button>
+    </header>
+
+    <div class="status-row">
+      <span id="status-dot" class="dot"></span>
+      <span id="status">正在读取…</span>
+      <span id="updated-at" class="updated-at"></span>
+    </div>
+
+    <section class="card">
+      <div class="section-heading">
+        <h2>价格</h2>
+        <span>USD · 24h 涨跌</span>
+      </div>
+      <div id="market-error" class="error" hidden></div>
+      <div id="quotes" class="quotes"><div class="empty">正在加载行情…</div></div>
+    </section>
+
+    <section class="card map-card">
+      <div class="section-heading">
+        <h2>清算地图</h2>
+        <span id="map-pair">Binance BTC/USDT</span>
+      </div>
+      <div id="map-error" class="error" hidden></div>
+      <div id="map-content" class="map-content">
+        <div class="empty">正在加载清算地图…</div>
+      </div>
+    </section>
+
+    <details id="settings-panel" class="settings">
+      <summary>设置</summary>
+      <div class="settings-options">
+        <div class="setting-caption">关注币种 <span>可多选</span></div>
+        <div id="symbol-buttons" class="symbol-buttons">
+          <button class="symbol-button" type="button" data-symbol="DOGE" aria-pressed="false">DOGE</button>
+          <button class="symbol-button" type="button" data-symbol="BTC" aria-pressed="false">BTC</button>
+          <button class="symbol-button" type="button" data-symbol="ETH" aria-pressed="false">ETH</button>
+          <button class="symbol-button" type="button" data-symbol="SOL" aria-pressed="false">SOL</button>
+          <button class="symbol-button" type="button" data-symbol="BNB" aria-pressed="false">BNB</button>
+        </div>
+        <div class="setting-caption">清算地图交易对 <span id="map-symbol-value">Binance_BTCUSDT</span></div>
+        <div id="map-symbol-buttons" class="symbol-buttons">
+          <button class="symbol-button" type="button" data-map-symbol="Binance_DOGEUSDT" aria-pressed="false">DOGE</button>
+          <button class="symbol-button" type="button" data-map-symbol="Binance_BTCUSDT" aria-pressed="false">BTC</button>
+          <button class="symbol-button" type="button" data-map-symbol="Binance_ETHUSDT" aria-pressed="false">ETH</button>
+          <button class="symbol-button" type="button" data-map-symbol="Binance_SOLUSDT" aria-pressed="false">SOL</button>
+          <button class="symbol-button" type="button" data-map-symbol="Binance_BNBUSDT" aria-pressed="false">BNB</button>
+        </div>
+        <button id="fetch-obe" class="setting-button" type="button"><span>从 CoinGlass 页面获取 obe</span><span id="obe-value" class="setting-value"></span><span class="setting-arrow">↻</span></button>
+        <div id="settings-message" class="settings-message" role="status"></div>
+      </div>
+    </details>
+    <footer>行情每 10 秒刷新 · 图标分两行显示完整价格</footer>
+  </main>
+</body>
+</html>
