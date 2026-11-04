@@ -4,6 +4,10 @@
 
 > 本项目为社区制作，与 CoinGlass 没有官方关联。数据来自 CoinGlass 网页使用的接口，接口可能随时调整。
 
+![alt text](image-1.png)
+
+![alt text](image.png)
+
 ## 功能
 
 - **工具栏价格图标**：默认显示 DOGE 价格。小数价格分两行显示，图标采用白底黑字；悬停可查看完整价格。
@@ -36,9 +40,7 @@
 node verify-extension-codec.js
 ```
 
-![alt text](image-1.png)
 
-![alt text](image.png)
 
 ## 许可证
 
